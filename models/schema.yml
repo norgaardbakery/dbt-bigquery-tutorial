@@ -1,5 +1,17 @@
 version: 2
 
+sources:
+  - name: jaffle_shop
+    database: dbt-tutorial
+    tables:
+      - name: orders
+      - name: customers
+
+  - name: stripe
+    database: dbt-tutorial
+    tables:
+      - name: payments
+
 models:
   - name: customers
     description: One record per customer
